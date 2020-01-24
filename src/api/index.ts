@@ -1,11 +1,14 @@
 import { getData } from './fetch';
 
-export async function vacancies(): Promise<any[]> {
-  let data = await getData('/vacancies?area=2');
-  return data.items;
+async function vacancies(): Promise<any[]> {
+  return await getData('/vacancies?area=2').then(data => data);
 }
 
-export function areas() {
+async function areas() {
   return getData('/areas');
 }
 
+export {
+  vacancies,
+  areas
+}
