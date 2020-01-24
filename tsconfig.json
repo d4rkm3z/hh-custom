@@ -14,7 +14,8 @@
     "noEmit": true,
     "jsx": "preserve",
     "isolatedModules": true,
-    "types": ["jest"]
+    "types": ["jest"],
+    "baseUrl": "src"
   },
   "include": ["src"]
 }
